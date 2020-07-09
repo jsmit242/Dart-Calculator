@@ -1,0 +1,116 @@
+#numbers {
+    
+}
+
+#numbers {
+    border: 5px solid black;
+    color: black;
+    font-size: 120px;
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: white;
+}
+
+.bullseyes {
+    border: 5px solid black;
+    color: black;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: white;
+}
+
+.bullseyegreen {
+    width: 428px;
+    cursor: pointer;
+}
+
+.bullseyegreen:hover {
+    background-color: rgb(39, 158, 39)
+}
+
+.bullseyered {
+    width: 428px;
+    cursor: pointer;
+}
+
+.bullseyered:hover {
+    background-color: rgb(158, 39, 39)
+}
+
+th {
+    padding: 5px 30px 5px 30px;
+}
+
+body {
+    padding-left: 25%;
+    padding-right: 15%;
+}
+
+#total {
+    border: 5px solid black;
+    width: 983px;
+    background-color: rgb(83, 83, 83);
+}
+
+#inlineLeft {
+    float: left;
+    font-size: 60px;
+    font-family: 'Courier New', Courier, monospace; 
+    color: rgb(224, 224, 224);
+}
+
+#inlineCenter {
+    float: center;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+#inlineRight {
+    float: right;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+#sumValue {
+    width:400px;
+    padding-left: 200px;
+}
+
+.clear {
+    background-color: rgb(223, 191, 14);
+    cursor: pointer;
+}
+
+#box {
+    border: 5px solid black;
+}
+
+input {
+    font-size: 150px;
+    padding: 0;
+    background-color: rgb(83, 83, 83);
+    border-color: black;
+    color: rgb(19, 199, 190)
+}
+
+body {
+    background-image: url("dart_background.jpg");
+}
+
+.greencell {
+    cursor: pointer;
+    background-color: rgb(7, 116, 7);
+}
+
+.greencell:hover {
+    background-color: rgb(19, 199, 190);
+}
+
+.redcell {
+    cursor: pointer;
+    background-color: rgb(151, 10, 10);
+}
+
+.redcell:hover {
+    background-color: rgb(19, 199, 190);
+}
+

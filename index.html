@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title>Darts Calculator</title>
+</head>
+<body>
+    <table id="numbers">
+        <tr>
+            <th id="number" class="greencell" onclick="updateValue(1)">1</th>
+            <th id="number" class="redcell" onclick="updateValue(2)">2</th>
+            <th id="number" class="greencell" onclick="updateValue(3)">3</th>
+            <th id="number" class="redcell" onclick="updateValue(4)">4</th>
+            <th id="number" class="greencell" onclick="updateValue(5)" >5</th>
+        </tr>
+        <tr>
+            <th id="number" class="redcell" onclick="updateValue(6)" >6</th>
+            <th id="number" class="greencell" onclick="updateValue(7)" >7</th>
+            <th id="number" class="redcell" onclick="updateValue(8)" >8</th>
+            <th id="number" class="greencell" onclick="updateValue(9)" >9</th>
+            <th id="number" class="redcell" onclick="updateValue(10)" >10</th>
+        </tr>
+        <tr>
+            <th id="number" class="greencell" onclick="updateValue(11)" >11</th>
+            <th id="number" class="redcell" onclick="updateValue(12)" >12</th>
+            <th id="number" class="greencell" onclick="updateValue(13)" >13</th>
+            <th id="number" class="redcell" onclick="updateValue(14)" >14</th>
+            <th id="number" class="greencell" onclick="updateValue(15)" >15</th>
+        </tr>
+        <tr>
+            <th id="number" class="redcell" onclick="updateValue(16)" >16</th>
+            <th id="number" class="greencell" onclick="updateValue(17)" >17</th>
+            <th id="number" class="redcell" onclick="updateValue(18)" >18</th>
+            <th id="number" class="greencell" onclick="updateValue(19)" >19</th>
+            <th id="number" class="redcell" onclick="updateValue(20)" >20</th>
+        </tr>
+    </table>
+    <table id="bullseyes" class="bullseyes">
+        <th id="bullseye" class="bullseyegreen" onclick="updateValue(25)" >Bullseye</th>
+        <th id="bullseye" class="bullseyered" onclick="updateValue(50)" >Double Bullseye</th>
+    </table>
+    <div id="total">
+        <span>
+            <div id="inlineLeft">
+                <p>Total:</p>
+            </div>
+            <div id="inlineCenter">
+                <input id="sumValue" disabled>
+            </div>
+            <div id="inlineRight" onclick="clearValue()">
+                <div id="box">
+                    <div id="clear" class="clear" maxlength=4 size=4>Clear</div>
+                </div>
+            </div>
+        </span>
+    </div>
+</body>
+
+<script src="./app.js"></script>
+
+</html>
