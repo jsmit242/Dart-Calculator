@@ -93,7 +93,8 @@ input {
 }
 
 body {
-    background-image: url("dart_background.jpg");
+    /* background-image: url("dart_background.jpg"); */
+    background-color: gray;
 }
 
 .greencell {
