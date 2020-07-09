@@ -80,6 +80,10 @@ body {
     cursor: pointer;
 }
 
+.clear:hover {
+    background-color: rgb(19, 199, 190);
+}
+
 #box {
     border: 5px solid black;
 }
@@ -99,19 +103,37 @@ body {
 
 .greencell {
     cursor: pointer;
-    background-color: rgb(7, 116, 7);
+    fill: #4F9962;
 }
 
 .greencell:hover {
-    background-color: rgb(19, 199, 190);
+    fill: rgb(19, 199, 190);
 }
 
 .redcell {
     cursor: pointer;
-    background-color: rgb(151, 10, 10);
+    fill: #ED3737;
 }
 
 .redcell:hover {
-    background-color: rgb(19, 199, 190);
+    fill: rgb(19, 199, 190);
+}
+
+.tancell {
+    cursor: pointer;
+    fill: #F7E9CD;
+}
+
+.tancell:hover {
+    fill: rgb(19, 199, 190);
+}
+
+.blackcell {
+    cursor: pointer;
+    fill: #000000;
+}
+
+.blackcell:hover {
+    fill: rgb(19, 199, 190);
 }
 
