@@ -42,8 +42,7 @@ th {
 
 body {
     background-image: url("woodBackground.jpeg");
-    text-align: center;
-    margin: auto;
+    padding-left: 35%;
 }
 
 #total {
