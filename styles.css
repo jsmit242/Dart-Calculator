@@ -38,17 +38,20 @@ th {
     padding: 5px 30px 5px 30px;
 }
 
-body {
+#all {
     background-image: url("woodBackground.jpeg");
 }
 
-#total {
-    border: 10px solid rgb(83, 27, 27);;
-    background-color: rgb(92, 65, 65);
+#dartboard-column {
+    border-right: 10px solid rgb(0, 0, 0);
+    border-left: 10px solid rgb(0, 0, 0);
+    background-image: radial-gradient(rgba(73, 52, 52, 0.986),rgb(116, 84, 84));
+    color: whitesmoke;
+    height: 1000px;
 }
 
 #sumValue {
-    width:300px;
+    width: 500px;
     height: 160px;
     font-size: 150px;
     background-color:rgb(92, 65, 65);
@@ -58,10 +61,10 @@ body {
 }
 
 .clear {
-    border: 3px solid rgb(83, 27, 27);
     background-color: rgb(223, 191, 14);
     cursor: pointer;
-    padding: 0;
+    float: right;
+    width: 100px;
 }
 
 .clear:hover {
@@ -128,8 +131,4 @@ body {
 
 .roll:hover {
 
-}
-
-#dartboard {
-    
 }
