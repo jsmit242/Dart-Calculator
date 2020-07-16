@@ -49,6 +49,7 @@ body {
 
 #sumValue {
     width:300px;
+    height: 160px;
     font-size: 150px;
     background-color:rgb(92, 65, 65);
     color: rgb(211, 211, 211);
@@ -60,7 +61,7 @@ body {
     border: 3px solid rgb(83, 27, 27);
     background-color: rgb(223, 191, 14);
     cursor: pointer;
-    width: 100px;
+    padding: 0;
 }
 
 .clear:hover {
