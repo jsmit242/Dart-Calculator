@@ -16,6 +16,7 @@
         <input id="sumValue" disabled maxlength=4>      
         <div>
           <button class="clear" onclick="clearValue()">Clear</button>
+          <button class="clear" onclick="saveScore()">Save</button>
         </div>
         <div id="dartboard" class="clickableDartboard">
           <svg id="dartboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 787 774" enable-background="new 0 0 787 774" xml:space="preserve">
@@ -110,6 +111,22 @@
       </div>
       <div class="col text-center">
         <h1>Scorboard</h1>
+        <div id="addPlayer">
+          <input id="playerName" type="text" value="Player Name" onclick="selectText('playerName')">
+          <button id="addPlayerButton" onclick="addPlayer()">Add</button>
+          <button id="removePlayerButton" onclick="removePlayer()">Remove</button>
+          <button id="resetPlayerButton" onclick="resetPlayer()">Reset</button>
+          <table id="playerList">
+            <tr>
+              <th>Player</th>
+              <th>Score</th>
+              <th>Select</th>
+            </tr>
+          </table>
+        </div>
+        <div id="players">
+
+        </div>
       </div>
     </div>
   </div>

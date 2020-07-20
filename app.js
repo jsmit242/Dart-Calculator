@@ -1,4 +1,5 @@
 var sum = 0;
+var playerNumber = 1;
 
 // seizure mode
 var count = [0];
@@ -28,7 +29,7 @@ var color3Rate = .12*colorAllRate;
 var color4Rate = .3*colorAllRate;
 var color5Rate = .1*colorAllRate; 
 var color6Rate = .8*colorAllRate;
-var fadeRate = .5;
+var fadeRate = 0.5;
 var seizureMode = false;
 
 function updateValue(wedgeValue){
@@ -59,19 +60,23 @@ function rollDice(dice){
 
 // roll dice on enter
 document.onkeydown = function(e){
-    console.log(e.keyCode)
-    if(e.keyCode == 13){
+    if(e.keyCode == 49){
       rollDice(1);
-      rollDice(2);
+    }
+    else if(e.keyCode == 50){
+        rollDice(2);
+    }
+    else if(e.keyCode == 13){
+        addPlayer();
     }
     else if(e.keyCode == 83 && seizureMode == false){
         console.log("Seizure Mode activated");
-        setInterval(colorFade, fadeRate);
+        var seizure = setInterval(colorFade, fadeRate);
         seizureMode = true;
     }
     else if(e.keyCode == 83 && seizureMode == true){
         console.log("Seizure Mode deactivated");
-        clearInterval(colorFade);
+        clearInterval(seizure);
         seizureMode = false;
         revertSeizureMode();
     }
@@ -80,8 +85,6 @@ document.onkeydown = function(e){
  function revertSeizureMode() {
     document.getElementById("dartboard-column").style.backgroundImage = "radial-gradient(rgba(73, 52, 52, 0.986),rgb(116, 84, 84))";
     document.getElementById("all").style.backgroundImage = "url(\"woodBackground.jpeg\")"
-
-
  }
 
  function colorFade(){
@@ -176,4 +179,75 @@ document.onkeydown = function(e){
     document.getElementById("dartboard-column").style.backgroundImage =  "linear-gradient(90deg, rgb(" + color1 + ", " + color2 + ", " + color3 + "), rgb(" + color4 + ", " + color5 + ", " + color6 + ")";
     document.getElementById("all").style.backgroundImage =  "linear-gradient(90deg, rgb(" + color4 + ", " + color3 + ", " + color2 + "), rgb(" + color5 + ", " + color6 + ", " + color1 + ")";
         
+}
+
+function selectText(id) {
+    console.log(id)
+    const input = document.getElementById(id);
+    input.focus();
+    input.select();
+  }
+
+function addPlayer() {
+    var table = document.getElementById("playerList");
+    var tr = document.createElement("tr");
+    name = document.getElementById("playerName").value;
+    tr.id = "playerRow"+playerNumber
+    table.appendChild(tr);
+    console.log(name);
+    
+    var td1 = document.createElement("td");
+    tr.appendChild(td1);
+    td1.id = "Player" + playerNumber;
+    td1.className = "player"
+    document.getElementById("Player" + playerNumber).innerHTML = name;
+    var td2 = document.createElement("td");
+    tr.appendChild(td2);
+    td2.id = "Score" + playerNumber;
+    td2.className = "score"
+    document.getElementById("Score" + playerNumber).innerHTML = 0;
+    
+    var td3 = document.createElement("td");
+    tr.appendChild(td3);
+    td3.id = "Checkbox" + playerNumber;
+    td3.className = "checkbox"
+
+    var checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.id = "CheckboxInput"+playerNumber
+    checkbox.value = "off"
+    td3.appendChild(checkbox);
+    playerNumber++;
+}
+
+function saveScore(){
+    var score = 0;
+    for (var i=1;i<playerNumber;i++){
+        if (document.getElementById("CheckboxInput"+i).checked == true){
+            score = document.getElementById("Score"+i).innerHTML;
+            document.getElementById("Score"+i).innerHTML = Number(document.getElementById("sumValue").value) + Number(score);
+        }
+    }
+}
+
+function removePlayer(){
+    var table = document.getElementById("playerList");
+    for (var i=1;i<playerNumber;i++){
+        if (document.getElementById("CheckboxInput"+i) != null){
+            if (document.getElementById("CheckboxInput"+i).checked == true){
+                tr = document.getElementById("playerRow"+i)
+                table.removeChild(tr)
+            }
+        }
+    }
+}
+
+function resetPlayer(){
+    for (var i=1;i<playerNumber;i++){
+        if (document.getElementById("CheckboxInput"+i) != null){
+            if (document.getElementById("CheckboxInput"+i).checked == true){
+                document.getElementById("Score"+i).innerHTML = 0;
+            }
+        }
+    }
 }
