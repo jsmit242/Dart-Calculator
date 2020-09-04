@@ -56,6 +56,15 @@ function rollDice(dice){
     roll = Math.floor(Math.random()*20 + 1)
     document.querySelector(id).value = roll;
     console.log("Roll " + dice + ": " + roll)
+
+    var roll1 = document.getElementById("dice1").value;
+    var roll2 = document.getElementById("dice2").value;
+
+    console.log(document.getElementById("gamesMenu").value == "roulette")
+    if(document.getElementById("gamesMenu").value == "roulette"){
+        highlightWedge(roll1,roll2);
+    }
+
 }
 
 // roll dice on enter
@@ -249,5 +258,21 @@ function resetPlayer(){
                 document.getElementById("Score"+i).innerHTML = 0;
             }
         }
+    }
+}
+
+function highlightWedge(roll1,roll2){
+    var tancells = document.getElementsByClassName("tancell");
+    var blackcells = document.getElementsByClassName("blackcell");
+    for (var i=0;i<10;i++){
+        console.log(i)
+        tancells[i].style.fill = "#F7E9CD";
+        blackcells[i].style.fill = "#000000";
+    }
+    document.getElementById("s" + roll1).style.fill = "blue";
+    document.getElementById("s" + roll2).style.fill = "purple";
+
+    if (roll1 == roll2){
+        document.getElementById("s" + roll1).style.fill = "gold";
     }
 }

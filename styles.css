@@ -130,7 +130,7 @@ th {
 }
 
 .roll:hover {
-
+    background-color: white;
 }
 
 #playerList {
@@ -152,4 +152,12 @@ th {
 
 #gamesMenu {
     width: 120px;
+}
+
+#dice1 {
+    background-color: blue;
+}
+
+#dice2 {
+    background-color: purple;
 }
