@@ -145,3 +145,11 @@ th {
     height: 50px;
     color: rgb(255, 255, 255);
 }
+
+.title {
+    color: whitesmoke;
+}
+
+#gamesMenu {
+    width: 120px;
+}
