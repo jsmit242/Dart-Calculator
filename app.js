@@ -35,6 +35,11 @@ var seizureMode = false;
 function updateValue(wedgeValue){
     sum = sum + wedgeValue;
     document.querySelector("#sumValue").value = sum;
+
+    if (wedgeValue > 20){
+        var audio = new Audio(url="wii_sports_nice_shot.mp3");
+        audio.play();
+    }
 }
 
 function clearValue(){
@@ -278,3 +283,4 @@ function highlightWedge(roll1,roll2){
         document.getElementById("s" + roll1).style.fill = "gold";
     }
 }
+
