@@ -19,7 +19,6 @@
 }
 
 .bullseyegreen {
-    width: 428px;
     cursor: pointer;
 }
 
@@ -28,7 +27,6 @@
 }
 
 .bullseyered {
-    width: 428px;
     cursor: pointer;
 }
 
@@ -40,50 +38,33 @@ th {
     padding: 5px 30px 5px 30px;
 }
 
-body {
+#all {
     background-image: url("woodBackground.jpeg");
-    padding-left: 35%;
 }
 
-#total {
-    border: 10px solid rgb(83, 27, 27);;
-    width: 600px;
-    background-color: rgb(92, 65, 65);
-}
-
-#inlineLeft {
-    float: left;
-    font-size: 60px;
-    font-family: 'Courier New', Courier, monospace; 
-    color: rgb(224, 224, 224);
-}
-
-#inlineCenter {
-    float: center;
-    font-size: xx-large;
-    font-family: 'Courier New', Courier, monospace; 
-}
-
-#inlineRight {
-    float: right;
-    font-size: xx-large;
-    font-family: 'Courier New', Courier, monospace; 
+#dartboard-column {
+    border-right: 10px solid rgb(0, 0, 0);
+    border-left: 10px solid rgb(0, 0, 0);
+    background-image: radial-gradient(rgba(73, 52, 52, 0.986),rgb(116, 84, 84));
+    color: whitesmoke;
+    height: 1000px;
 }
 
 #sumValue {
-    width:300px;
-    padding-left: 200px;
+    width: 500px;
+    height: 160px;
     font-size: 150px;
-    padding: 0;
     background-color:rgb(92, 65, 65);
     color: rgb(211, 211, 211);
-    border: none;
+    border: 5px solid black;
+    text-align: center;
 }
 
 .clear {
     background-color: rgb(223, 191, 14);
-    border-color: rgb(83, 27, 27);
     cursor: pointer;
+    float: right;
+    width: 100px;
 }
 
 .clear:hover {
@@ -133,6 +114,7 @@ body {
 .dice {
     height: 100px;
     width: 100px;
+    margin: 10px;
     font-size: 80px;
     background-color: rgb(0, 0, 0);
     color: white;
@@ -140,17 +122,42 @@ body {
 }
 
 .roll {
-    width: 106px;
-    margin-top: 10px;
+    width: 100px;
+    margin: 0 10px;
     text-align: center;
     font-size: 20px;
     background-color: rgb(122, 122, 122);
 }
 
 .roll:hover {
-
+    background-color: white;
 }
 
-#dartboard {
-    
+#playerList {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 300px;
+    margin: 30px;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.player {
+    height: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.title {
+    color: whitesmoke;
+}
+
+#gamesMenu {
+    width: 120px;
+}
+
+#dice1 {
+    background-color: blue;
+}
+
+#dice2 {
+    background-color: purple;
 }
