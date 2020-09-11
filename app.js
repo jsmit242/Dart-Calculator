@@ -232,9 +232,11 @@ function addPlayer() {
 function saveScore(){
     var score = 0;
     for (var i=1;i<playerNumber;i++){
-        if (document.getElementById("CheckboxInput"+i).checked == true){
-            score = document.getElementById("Score"+i).innerHTML;
-            document.getElementById("Score"+i).innerHTML = Number(document.getElementById("sumValue").value) + Number(score);
+        if (document.getElementById("CheckboxInput"+i) != null){
+            if (document.getElementById("CheckboxInput"+i).checked == true){
+                score = document.getElementById("Score"+i).innerHTML;
+                document.getElementById("Score"+i).innerHTML = Number(document.getElementById("sumValue").value) + Number(score);
+            }
         }
     }
 }
